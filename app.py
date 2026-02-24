@@ -20,6 +20,4 @@ def health():
 # Run the application
 if __name__ == "__main__":
     print("App executed successfully")
-    # Check if running in a CI/CD environment (like Jenkins) to prevent hanging
-    if not os.environ.get("CI") and not os.environ.get("JENKINS_HOME"):
-        app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000)
