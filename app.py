@@ -18,9 +18,9 @@ def health():
     return "OK"
 
 # Run the application
-if _print("App executed successfully")
-    # Set host to 0.0.0.0 to make it accessible externally, and port to 5000
+if __name__ == "__main__":
+    print("App executed successfully")
     # Check if running in a CI/CD environment (like Jenkins) to prevent hanging
     if not os.environ.get("CI") and not os.environ.get("JENKINS_HOME"):
         # Set host to 0.0.0.0 to make it accessible externally, and port to 5000
-    app.run(host="0.0.0.0", port=5000)
+        app.run(host="0.0.0.0", port=5000)
