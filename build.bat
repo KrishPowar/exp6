@@ -6,5 +6,4 @@ call venv\Scripts\activate
 pip install -r requirements.txt
 
 :: Run the Python script
-set CI=true
-python app.py
+start /B python app.py
