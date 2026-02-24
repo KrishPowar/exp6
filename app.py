@@ -1,0 +1,26 @@
+# Import the Flask class from the flask module
+import os
+from flask import Flask
+
+# Create an instance of the Flask class
+app = Flask(__name__)
+
+# Define the root route ("/")
+@app.route("/")
+def home():
+    # Return the required string for the demo
+    return "Name: Krish | AppID: 12345"
+
+# Define a health check route ("/health")
+@app.route("/health")
+def health():
+    # Return "OK" to indicate the app is running properly
+    return "OK"
+
+# Run the application
+if _print("App executed successfully")
+    # Set host to 0.0.0.0 to make it accessible externally, and port to 5000
+    # Check if running in a CI/CD environment (like Jenkins) to prevent hanging
+    if not os.environ.get("CI") and not os.environ.get("JENKINS_HOME"):
+        # Set host to 0.0.0.0 to make it accessible externally, and port to 5000
+    app.run(host="0.0.0.0", port=5000)
